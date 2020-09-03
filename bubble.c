@@ -1,22 +1,23 @@
 /* Bubble sort code */
  
 #include <stdio.h>
+#include <stdilb.h>
  
 int main()
 {
-  int array[100], n, c, d, swap;
- 
+  long long int n;
   printf("Enter number of elements\n");
-  scanf("%d", &n);
+  scanf("%lld", &n);
+  long long int array[n], c, d, swap;
  
-  printf("Enter %d integers\n", n);
+  printf("Enter %lld integers\n", n);
  
   for (c = 0; c < n; c++)
-    scanf("%d", &array[c]);
+    scanf("%lld", &array[c]);
  
   for (c = 0 ; c < ( n - 1 ); c++)
   {
-    for (d = 0 ; d < n - c - 1; d++)
+    for (d = 0 ; d < (n - c - 1); d++)
     {
       if (array[d] > array[d+1]) /* For decreasing order use < */
       {
@@ -30,7 +31,7 @@ int main()
   printf("Sorted list in ascending order:\n");
  
   for ( c = 0 ; c < n ; c++ )
-     printf("%d\n", array[c]);
+     printf("%lld\n", array[c]);
  
   return 0;
 }
